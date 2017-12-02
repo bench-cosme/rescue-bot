@@ -80,7 +80,7 @@ module.exports.cards = {
             // image: 'http://res.cloudinary.com/shinmarq/image/upload/v1512206652/Logo_3_-01_prwvlf.jpg',
             button: [
                 {msg:'Crime', btn_title: 'Proceed'},
-                {msg:'Subscribe', btn_title: 'Subscribe'}
+                {msg:'Subscribe_Crime', btn_title: 'Subscribe'}
             ]
         },
         {
@@ -90,7 +90,7 @@ module.exports.cards = {
             // image: 'http://res.cloudinary.com/shinmarq/image/upload/v1512206652/Logo_3_-01_prwvlf.jpg',
             button: [
                 {msg:'Corruption', btn_title: 'Proceed'},
-                {msg:'Subscribe', btn_title: 'Subscribe'}
+                {msg:'Subscribe_Corrupt', btn_title: 'Subscribe'}
             ]
         },
         {
@@ -100,7 +100,7 @@ module.exports.cards = {
             // image: 'http://res.cloudinary.com/shinmarq/image/upload/v1512206652/Logo_3_-01_prwvlf.jpg',
             button: [
                 {msg:'Calamities', btn_title: 'Proceed'},
-                {msg:'Subscribe', btn_title: 'Subscribe'}
+                {msg:'Subscribe_Cal', btn_title: 'Subscribe'}
             ]
         },
         {
@@ -110,7 +110,7 @@ module.exports.cards = {
             // image: 'http://res.cloudinary.com/shinmarq/image/upload/v1512206652/Logo_3_-01_prwvlf.jpg',
             button: [
                 {msg:'Accident', btn_title: 'Proceed'},
-                {msg:'Subscribe', btn_title: 'Subscribe'}
+                {msg:'Subscribe_Acc', btn_title: 'Subscribe'}
             ]
         }
     ],
