@@ -21,6 +21,15 @@ exports.prompts = {
         'Successfully sent message to Emergency Hotline. While we are waiting for response, would you like to send this incident to your emergency contact?',
         'Please enter your emergency contact.',
         'Successfully sent to your Emergency Contact!'
+    ],
+    volunteer: [
+        'Volunteers are the lifeline of all operations of any foundation. Each need volunteers that can help respond to our fellow Filipinos in disasters and calamities.',
+        'Please answer the following as completely and honestly as possible',
+        'What is your full name?',
+        'Please enter your address',
+        'Can I have your email please?',
+        'What\'s your area of interest?',
+        'Great! I\'ve already sent your information to this foundation\'s email. You will receive a response from them soon.'
     ]
 };
 
@@ -77,7 +86,7 @@ module.exports.cards = {
             name: 'crime',
             title: 'Crime',
             text: 'Seek help and tips about Crime.',
-            image: 'http://res.cloudinary.com/chatbotph/image/upload/v1512247876/rescue/17968689-Family-Abuse-Children-Hitting-Confine-Sexual-Harassment-Stick-Figure-Pictogram-Icon-Stock-Vector.jpg',
+            image: 'http://res.cloudinary.com/chatbotph/image/upload/v1512249904/rescue/aid166136-v4-900px-Fight-Crime-Step-5-Version-2.jpg',
             button: [
                 { msg: 'Crime', btn_title: 'Proceed' },
                 { msg: 'Subscribe_Crime', btn_title: 'Subscribe' }
@@ -243,6 +252,23 @@ module.exports.cards = {
             ]
         }
     ],
+    areaofinterest: [
+        {
+            name: 'areaofinterest',
+            //title: 'Corruption',
+             text: 'Select Are of interest',
+            image: 'http://res.cloudinary.com/chatbotph/image/upload/v1512234201/rescue/24623509_1894219843926099_1412550792_o_n1opij.png',
+            button: [
+                {msg:'fundraiser', btn_title: 'Fund Raiser'},
+                {msg:'render', btn_title: 'Render Volunteer Service'},
+                {msg:'medical', btn_title: 'Medical'},
+                {msg:'dental', btn_title: 'Dental'},
+                {msg:'others', btn_title: 'Others, please specify'},
+                // {msg:'News', btn_title: 'Subscribe News'},
+                // {msg:'Hotline', btn_title: 'Hotlines'},
+            ]
+        }
+    ],
 }
 
 module.exports.styles = {
@@ -275,7 +301,7 @@ module.exports.persistentMenu = {
                     payload: "Help"
                 },
                 {
-                    title: "Powered By ChatbotPH 🤖",
+                    title: "Powered By Werpa Rangers 🤖",
                     type: "web_url",
                     url: "http://www.chatbot.ph/",
                     webview_height_ratio: "compact"
