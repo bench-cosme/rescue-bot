@@ -167,9 +167,9 @@ module.exports.cards = {
             // text: '',
             image: 'http://res.cloudinary.com/chatbotph/image/upload/v1512234201/rescue/24623509_1894219843926099_1412550792_o_n1opij.png',
             button: [
-                { msg: 'Report', btn_title: 'Report' },
-                { msg: 'News', btn_title: 'Subscribe News' },
-                { msg: 'Hotline', btn_title: 'Hotlines' },
+                {msg:'Report', btn_title: 'Report'},
+                // {msg:'News', btn_title: 'Subscribe News'},
+                // {msg:'Hotline', btn_title: 'Hotlines'},
             ]
         }
     ],
@@ -180,9 +180,9 @@ module.exports.cards = {
             // text: '',
             image: 'http://res.cloudinary.com/chatbotph/image/upload/v1512234180/rescue/Flood-01_ileqth.jpg',
             button: [
-                { msg: 'Report', btn_title: 'Report' },
-                { msg: 'Tips', btn_title: 'Safety Tips' },
-                { msg: 'Hotline', btn_title: 'Hotlines' },
+                {msg:'Report', btn_title: 'Report'},
+                {msg:'Tips_T', btn_title: 'Safety Tips'},
+                {msg:'Hotline_T', btn_title: 'Hotlines'},
             ]
         },
         {
@@ -191,9 +191,9 @@ module.exports.cards = {
             // text: '',
              image: 'http://res.cloudinary.com/chatbotph/image/upload/v1512234171/rescue/24322162_1894219970592753_1334253143_o_lplc3g.png',
             button: [
-                { msg: 'Report', btn_title: 'Report' },
-                { msg: 'Tips', btn_title: 'Safety Tips' },
-                { msg: 'Hotline', btn_title: 'Hotlines' },
+                {msg:'Report', btn_title: 'Report'},
+                {msg:'Tips_E', btn_title: 'Safety Tips'},
+                {msg:'Hotline_E', btn_title: 'Hotlines'},
             ]
         },
         {
@@ -202,9 +202,9 @@ module.exports.cards = {
             // text: '',
              image: 'http://res.cloudinary.com/chatbotph/image/upload/v1512234171/rescue/24322162_1894219970592753_1334253143_o_lplc3g.png',
             button: [
-                { msg: 'Report', btn_title: 'Report' },
-                { msg: 'Tips', btn_title: 'Safety Tips' },
-                { msg: 'Hotline', btn_title: 'Hotlines' },
+                {msg:'Report', btn_title: 'Report'},
+                {msg:'Tips_F', btn_title: 'Safety Tips'},
+                {msg:'Hotline_F', btn_title: 'Hotlines'},
             ]
         }
     ],
@@ -215,9 +215,9 @@ module.exports.cards = {
             // text: '',
             image: 'http://res.cloudinary.com/chatbotph/image/upload/v1512234204/rescue/24323901_1894220170592733_1608231463_o_ohuwsj.png',
             button: [
-                { msg: 'Report', btn_title: 'Report' },
-                { msg: 'Tips', btn_title: 'Safety Tips' },
-                { msg: 'Hotline', btn_title: 'Hotlines' },
+                {msg:'Report', btn_title: 'Report'},
+                {msg:'Tips_R', btn_title: 'Safety Tips'},
+                {msg:'Hotline_R', btn_title: 'Hotlines'},
             ]
         },
         {
@@ -226,9 +226,9 @@ module.exports.cards = {
             // text: '',
             image: 'http://res.cloudinary.com/chatbotph/image/upload/v1512249288/rescue/aid699163-v4-900px-Know-if-You_ve-Had-a-Heart-Attack-Step-1-Version-2.jpg',
             button: [
-                { msg: 'Report', btn_title: 'Report' },
-                { msg: 'Tips', btn_title: 'Safety Tips' },
-                { msg: 'Hotline', btn_title: 'Hotlines' },
+                {msg:'Report', btn_title: 'Report'},
+                {msg:'Tips_H', btn_title: 'Safety Tips'},
+                {msg:'Hotline_H', btn_title: 'Hotlines'},
             ]
         },
         {
@@ -237,9 +237,9 @@ module.exports.cards = {
             // text: '',
             image: 'http://res.cloudinary.com/chatbotph/image/upload/v1512249226/rescue/aid1272248-v4-900px-Save-an-Active-Drowning-Victim-Step-9-Version-3.jpg',
             button: [
-                { msg: 'Report', btn_title: 'Report' },
-                { msg: 'Tips', btn_title: 'Safety Tips' },
-                { msg: 'Hotline', btn_title: 'Hotlines' },
+                {msg:'Report', btn_title: 'Report'},
+                {msg:'Tips_C', btn_title: 'Safety Tips'},
+                {msg:'Hotline_C', btn_title: 'Hotlines'},
             ]
         }
     ],

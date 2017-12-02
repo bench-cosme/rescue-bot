@@ -74,7 +74,7 @@ bot.dialog('/Emergency', dialogs.emergency)
 });
 bot.dialog('/Help', dialogs.help)
 .triggerAction({
-    matches: /^help|HELP$/i
+    matches: /^Help|help|HELP$/i
 });
 bot.dialog('/Incidents', dialogs.help.incidents);
 bot.dialog('/Incidents/Crime', dialogs.help.crime)
