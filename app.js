@@ -37,7 +37,7 @@ bot.use({
     botbuilder: (session, next) => {
         var restart = /^restart|started|get started|start over|get_started/i.test(session.message.text);
 
-        api.userProfile(session.message.user.id, 'first_name last_name', (err, res) => {
+        api.userProfile(session.message.user.id, 'first_name,last_name', (err, res) => {
             console.log(res)
             var body = {
                 name: {
