@@ -93,6 +93,10 @@ bot.dialog('/Incidents/Accident', dialogs.help.accident)
 .triggerAction({
     matches: /^accident|Accident$/i
 });
+bot.dialog('/Volunteer', dialogs.volunteer)
+.triggerAction({
+    matches: /^Volunteeer|volunteer$/i
+});
 
 //=========================================================
 // Server Setup
