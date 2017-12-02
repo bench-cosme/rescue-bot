@@ -106,8 +106,7 @@ module.exports.getIncidents =
 (crime, callback) => {
     var option = {
         url: format('https://rescue-api.azurewebsites.net/incident/{0}', crime),
-        method: 'PATCH',
-        body: body,
+        method: 'GET',
         // json: true
     }
 
