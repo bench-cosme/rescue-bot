@@ -216,8 +216,8 @@ module.exports.cards = {
             // image: 'http://res.cloudinary.com/shinmarq/image/upload/v1512206652/Logo_3_-01_prwvlf.jpg',
             button: [
                 {msg:'Report', btn_title: 'Report'},
-                {msg:'Tips', btn_title: 'Safety Tips'},
-                {msg:'Hotline', btn_title: 'Hotlines'},
+                {msg:'Tips_R', btn_title: 'Safety Tips'},
+                {msg:'Hotline_R', btn_title: 'Hotlines'},
             ]
         },
         {
@@ -227,8 +227,8 @@ module.exports.cards = {
             // image: 'http://res.cloudinary.com/shinmarq/image/upload/v1512206652/Logo_3_-01_prwvlf.jpg',
             button: [
                 {msg:'Report', btn_title: 'Report'},
-                {msg:'Tips', btn_title: 'Safety Tips'},
-                {msg:'Hotline', btn_title: 'Hotlines'},
+                {msg:'Tips_H', btn_title: 'Safety Tips'},
+                {msg:'Hotline_H', btn_title: 'Hotlines'},
             ]
         },
         {
@@ -238,8 +238,8 @@ module.exports.cards = {
             // image: 'http://res.cloudinary.com/shinmarq/image/upload/v1512206652/Logo_3_-01_prwvlf.jpg',
             button: [
                 {msg:'Report', btn_title: 'Report'},
-                {msg:'Tips', btn_title: 'Safety Tips'},
-                {msg:'Hotline', btn_title: 'Hotlines'},
+                {msg:'Tips_C', btn_title: 'Safety Tips'},
+                {msg:'Hotline_C', btn_title: 'Hotlines'},
             ]
         }
     ],
