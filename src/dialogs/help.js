@@ -101,9 +101,10 @@ module.exports.crime = [
 
                 case choices[1]:
                     var crime = 'Murder';
+
                     api.getIncidents(crime, (res) => {
                         console.log(res);
-                        var tips = res.safetytips[0].tips;
+                        var tips = res.safetytips;
 
                         tips.forEach((tip) => {
                             session.endConversation(tip);
@@ -113,38 +114,82 @@ module.exports.crime = [
                 break;
 
                 case choices[4]:
-                    var crime = 'Murder';
-                    console.log('tips_rob');
+                    var crime = 'Robbery';
+                    
+                    api.getIncidents(crime, (res) => {
+                        console.log(res);
+                        var tips = res.safetytips;
+
+                        tips.forEach((tip) => {
+                            session.endConversation(tip);
+                        })
+                    });
                 break;
 
                 case choices[7]:
-                    var crime = 'Murder';
-                    console.log('tips_drugs');
+                    var crime = 'Drugs';
+                    
+                    api.getIncidents(crime, (res) => {
+                        console.log(res);
+                        var tips = res.safetytips;
+
+                        tips.forEach((tip) => {
+                            session.endConversation(tip);
+                        })
+                    });
                 break;
 
                 case choices[10]:
                     var crime = 'Abuse';
-                    console.log('tips_childabuse');
-                break;
+                    
+                    api.getIncidents(crime, (res) => {
+                        console.log(res);
+                        var tips = res.safetytips;
 
-                case choices[13]:
-                    console.log('tips_rape');
+                        tips.forEach((tip) => {
+                            session.endConversation(tip);
+                        })
+                    });
                 break;
 
                 case choices[2]:
-                    console.log('tips_rape');
+                    var crime = 'Murder'
+
+                    api.getIncidents(crime, (res) => {
+                        console.log(res);
+                        var hotline = res.hotline;
+                        session.endConversation(hotline);
+                    });
                 break;
 
                 case choices[5]:
+                    var crime = 'Robbery'
+
+                    api.getIncidents(crime, (res) => {
+                        console.log(res);
+                        var hotline = res.hotline;
+                        session.endConversation(hotline);
+                    });
                 break;
 
                 case choices[8]:
+                    var crime = 'Drugs'
+
+                    api.getIncidents(crime, (res) => {
+                        console.log(res);
+                        var hotline = res.hotline;
+                        session.endConversation(hotline);
+                    });
                 break;
 
                 case choices[11]:
-                break;
+                    var crime = 'Abuse'
 
-                case choices[14]:
+                    api.getIncidents(crime, (res) => {
+                        console.log(res);
+                        var hotline = res.hotline;
+                        session.endConversation(hotline);
+                    });
                 break;
                 
             }
