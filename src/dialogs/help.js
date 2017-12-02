@@ -104,7 +104,7 @@ module.exports.crime = [
 
                     api.getIncidents(crime, (res) => {
                         console.log(res);
-                        var tips = res.safetytips;
+                        var tips = res.data.safetytips;
 
                         tips.forEach((tip) => {
                             session.endConversation(tip);
@@ -118,7 +118,7 @@ module.exports.crime = [
                     
                     api.getIncidents(crime, (res) => {
                         console.log(res);
-                        var tips = res.safetytips;
+                        var tips = res.data.safetytips;
 
                         tips.forEach((tip) => {
                             session.endConversation(tip);
@@ -131,7 +131,7 @@ module.exports.crime = [
                     
                     api.getIncidents(crime, (res) => {
                         console.log(res);
-                        var tips = res.safetytips;
+                        var tips = res.data.safetytips;
 
                         tips.forEach((tip) => {
                             session.endConversation(tip);
@@ -144,7 +144,7 @@ module.exports.crime = [
                     
                     api.getIncidents(crime, (res) => {
                         console.log(res);
-                        var tips = res.safetytips;
+                        var tips = res.data.safetytips;
 
                         tips.forEach((tip) => {
                             session.endConversation(tip);
@@ -157,7 +157,7 @@ module.exports.crime = [
 
                     api.getIncidents(crime, (res) => {
                         console.log(res);
-                        var hotline = res.hotline;
+                        var hotline = res.data.hotline;
                         session.endConversation(hotline);
                     });
                 break;
@@ -167,7 +167,7 @@ module.exports.crime = [
 
                     api.getIncidents(crime, (res) => {
                         console.log(res);
-                        var hotline = res.hotline;
+                        var hotline = res.data.hotline;
                         session.endConversation(hotline);
                     });
                 break;
@@ -177,7 +177,7 @@ module.exports.crime = [
 
                     api.getIncidents(crime, (res) => {
                         console.log(res);
-                        var hotline = res.hotline;
+                        var hotline = res.data.hotline;
                         session.endConversation(hotline);
                     });
                 break;
@@ -187,7 +187,7 @@ module.exports.crime = [
 
                     api.getIncidents(crime, (res) => {
                         console.log(res);
-                        var hotline = res.hotline;
+                        var hotline = res.data.hotline;
                         session.endConversation(hotline);
                     });
                 break;
