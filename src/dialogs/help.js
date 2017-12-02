@@ -43,9 +43,8 @@ module.exports.incidents = [
 
                 case choices[1]:
                     var subscription = 'Crime'
-                    editUser(session.message.user.id, subscription, (res) => {
-                        session.endConversation(format('You\'re now subscribed to news about {0}', subscription));
-                    });
+                    session.endConversation(format('You\'re now subscribed to news about {0}', subscription));
+                    editUser(session.message.user.id, subscription);
                 break;
 
                 case choices[2]:
@@ -54,9 +53,8 @@ module.exports.incidents = [
 
                 case choices[3]:
                     var subscription = 'Corruption'
-                    editUser(session.message.user.id, subscription, (res) => {
-                        session.endConversation(format('You\'re now subscribed to news about {0}', subscription));
-                    });
+                    session.endConversation(format('You\'re now subscribed to news about {0}', subscription));
+                    editUser(session.message.user.id, subscription);
                 break;
 
                 case choices[4]:
@@ -65,9 +63,8 @@ module.exports.incidents = [
 
                 case choices[5]:
                      var subscription = 'Calamity'
-                     editUser(session.message.user.id, subscription, (res) => {
-                        session.endConversation(format('You\'re now subscribed to news about {0}', subscription));
-                    });
+                     session.endConversation(format('You\'re now subscribed to news about {0}', subscription));
+                     editUser(session.message.user.id, subscription);
                 break;
 
                 case choices[6]:
@@ -76,9 +73,8 @@ module.exports.incidents = [
 
                 case choices[7]:
                     var subscription = 'Accident'
-                    editUser(session.message.user.id, subscription, (res) => {
-                        session.endConversation(format('You\'re now subscribed to news about {0}', subscription));
-                    });
+                    session.endConversation(format('You\'re now subscribed to news about {0}', subscription));
+                    editUser(session.message.user.id, subscription);
                 break;
             }
         }

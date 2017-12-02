@@ -89,7 +89,7 @@ module.exports.addUser =
 }
 
 module.exports.editUser = 
-(id, body, callback) => {
+(id, body) => {
     var option = {
         url: format('https://rescue-api.azurewebsites.net/user/{0}', id),
         method: 'PATCH',
@@ -98,7 +98,7 @@ module.exports.editUser =
     }
 
     request(option, (err, httpRes, body) => {
-        !err ? callback(body) : console.log(err); 
+        !err ? console.log(body) : console.log(err); 
     })
 }
 /**END */
