@@ -35,18 +35,6 @@ module.exports.incidents = [
 
         if(!results.response){
             session.replaceDialog('/');
-        } else if(results.response.entity == choices[0]){
-            editUser(session.message.user.id, results.response.entity);
-            session.replaceDialog('/Incidents/Crime');
-        } else if(results.response.entity == choices[1]){
-            editUser(session.message.user.id, results.response.entity);
-            session.replaceDialog('/Incidents/Corruption');
-        } else if(results.response.entity == choices[2]){
-            editUser(session.message.user.id, results.response.entity);
-            session.replaceDialog('/Incidents/Calamity');
-        } else if(results.response.entity == choices[3]){
-            editUser(session.message.user.id, results.response.entity);
-            session.replaceDialog('/Incidents/Accident');
         } else {
             switch(results.response.entity) {
                 case choices[0]:
