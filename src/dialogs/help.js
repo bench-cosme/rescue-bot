@@ -32,7 +32,7 @@ module.exports.incidents = [
     },
     (session, results) => {
         var choices = card.choices(consts.cards.incidents);
-
+        console.log(choices)
         if(!results.response){
             session.replaceDialog('/');
         } else {
