@@ -253,7 +253,8 @@ module.exports.persistentMenu = {
                 {
                     title: "Powered By ChatbotPH 🤖",
                     type: "web_url",
-                    url: "http://www.chatbot.ph/"
+                    url: "http://www.chatbot.ph/",
+                    webview_height_ratio: "compact"
                 },
             ]
         },
