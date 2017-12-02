@@ -111,7 +111,7 @@ module.exports.getIncidents =
     }
 
     request(option, (err, httpRes, body) => {
-        !err ? callback(body) : console.log(err); 
+        !err ? callback(JSON.parse(body)) : console.log(err); 
     })
 }
 /**END */
