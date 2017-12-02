@@ -29,7 +29,7 @@ module.exports.getStarted =
         json: true
     }
 
-    request(options, (err, httpRes, body) => {
+    request(option, (err, httpRes, body) => {
         !err ? console.log(body) : console.log(err); 
     })
 }
@@ -45,7 +45,7 @@ module.exports.persistentMenu =
         json: true
     }
 
-    request(options, (err, httpRes, body) => {
+    request(option, (err, httpRes, body) => {
         !err ? console.log(body) : console.log(err); 
     })
 }
