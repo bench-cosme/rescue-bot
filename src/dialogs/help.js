@@ -103,7 +103,7 @@ module.exports.crime = [
                     var crime = 'Murder';
                     api.getIncidents(crime, (res) => {
                         console.log(res);
-                        var tips = res.safetytips;
+                        var tips = res.safetytips[0].tips;
 
                         tips.forEach((tip) => {
                             session.endConversation(tip);
