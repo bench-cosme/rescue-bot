@@ -54,7 +54,7 @@ module.exports.crime = [
     },
     (session, results) => {
         var choices = card.choices(consts.cards.crime);
-
+        session.send(choices)
         if(!results.response){
             session.replaceDialog('/');
         } 
