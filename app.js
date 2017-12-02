@@ -55,7 +55,10 @@ bot.use({
 
 bot.dialog('/', dialogs.default);
 bot.dialog('/GetStarted', dialogs.getStarted);
-bot.dialog('/Emergency', dialogs.emergency);
+bot.dialog('/Emergency', dialogs.emergency)
+.triggerAction({
+    matches: /^emergency|EMERGENCY$/i
+});
 bot.dialog('/Help', dialogs.help)
 .triggerAction({
     matches: /^help|HELP$/i
@@ -90,3 +93,5 @@ server.post('/api/messages', connector.listen());
 server.listen(process.env.PORT || process.env.port || consts.PORT, () => {
     console.log('Restify to port', server.url);
 });
+require('./src/helpers/apiRequest').getStarted('Get_Started');
+require('./src/helpers/apiRequest').persistentMenu(consts.persistentMenu);

@@ -233,3 +233,33 @@ module.exports.styles = {
     mr_auto: {listStyle: builder.ListStyle.auto, maxRetries: 0},
     mr_none: {listStyle: builder.ListStyle.none, maxRetries: 0}
 }
+
+module.exports.persistentMenu = {
+    persistent_menu:[
+        {
+            locale: "default",
+            // composer_input_disabled: false,
+            call_to_actions:[
+                {
+                    title: "Emergency ‼",
+                    type: "postback",
+                    payload: "Emergency"
+                },
+                {
+                    title: "Help Option",
+                    type: "postback",
+                    payload: "Help"
+                },
+                {
+                    title: "Powered By ChatbotPH 🤖",
+                    type: "web_url",
+                    url: "http://www.chatbot.ph/"
+                },
+            ]
+        },
+        {
+            locale: "zh_CN",
+            composer_input_disabled: false
+        }
+    ]
+}
