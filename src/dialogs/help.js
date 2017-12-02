@@ -257,8 +257,79 @@ module.exports.accident = [
             session.replaceDialog('/');
         } else {
             switch(results.response.entity) {
-                case choices[0]:case choices[3]:case choices[6]:case choices[9]:case choices[12]:
+                case choices[0]:case choices[3]:case choices[6]:
                     session.replaceDialog('/Emergency');
+                break;
+
+                case choices[1]:
+                    var crime = 'Road';
+                    
+                    api.getIncidents(crime, (res) => {
+                        console.log(res);
+                        var tips = res.data.safetytips;
+
+                        tips.forEach((tip) => {
+                            session.endConversation(tip);
+                        })
+                    });
+
+                    
+                break;
+
+                case choices[4]:
+                    var crime = 'Health';
+                    
+                    api.getIncidents(crime, (res) => {
+                        console.log(res);
+                        var tips = res.data.safetytips;
+
+                        tips.forEach((tip) => {
+                            session.endConversation(tip);
+                        })
+                    });
+                break;
+
+                case choices[7]:
+                    var crime = 'Coast';
+                    
+                    api.getIncidents(crime, (res) => {
+                        console.log(res);
+                        var tips = res.data.safetytips;
+
+                        tips.forEach((tip) => {
+                            session.endConversation(tip);
+                        })
+                    });
+                break;
+
+                case choices[2]:
+                    var crime = 'Road'
+                    
+                    api.getIncidents(crime, (res) => {
+                        console.log(res);
+                        var hotline = res.data.hotline;
+                        session.endConversation(hotline);
+                    });
+                break;
+
+                case choices[5]:
+                    var crime = 'Health'
+                    
+                    api.getIncidents(crime, (res) => {
+                        console.log(res);
+                        var hotline = res.data.hotline;
+                        session.endConversation(hotline);
+                    });
+                break;
+
+                case choices[8]:
+                    var crime = 'Coast'
+                    
+                    api.getIncidents(crime, (res) => {
+                        console.log(res);
+                        var hotline = res.data.hotline;
+                        session.endConversation(hotline);
+                    });
                 break;
             }
         }
