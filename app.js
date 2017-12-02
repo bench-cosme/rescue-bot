@@ -1,0 +1,92 @@
+const builder = require('botbuilder');
+const restify = require('restify');
+
+const dialogs = require('./src/dialogs');
+const consts = require('./src/config/consts');
+
+//=========================================================
+// Bot Setup
+//=========================================================
+
+/**Create chat bot*/
+const connector = new builder.ChatConnector({
+    appId: process.env.MICROSOFT_APP_ID,
+    appPassword: process.env.MICROSOFT_APP_PASSWORD
+});
+const bot = new builder.UniversalBot(connector);
+
+//=========================================================
+// Bots Middleware
+//=========================================================
+/**
+ bot.use({
+    send: (event, next) => {
+        console.log(event);
+        next();
+    },
+    receive: (event, next) => {
+        console.log(event);
+        next();
+    },
+});
+ */
+bot.use(builder.Middleware.dialogVersion({ version: 1.0, resetCommand: /^reset/i }));
+bot.use(builder.Middleware.sendTyping());
+bot.use({
+    botbuilder: (session, next) => {
+        var restart = /^restart|started|get started|start over|get_started/i.test(session.message.text);
+
+        if (restart) {
+            session.userData = {}; 
+            session.privateConversationData = {};
+            session.conversationData = {};
+            session.dialogData = {};
+
+            /**INSERT BEGIN DIALOG HERE*/
+            session.beginDialog('/GetStarted');
+        }else { next(); }
+
+    }
+});
+
+//=========================================================
+// Bot's Dialogs
+//=========================================================
+
+bot.dialog('/', dialogs.default);
+bot.dialog('/GetStarted', dialogs.getStarted);
+bot.dialog('/Emergency', dialogs.emergency);
+bot.dialog('/Help', dialogs.help)
+.triggerAction({
+    matches: /^help|HELP$/i
+});
+bot.dialog('/Incidents', dialogs.help.incidents);
+bot.dialog('/Incidents/Crime', dialogs.help.crime)
+.triggerAction({
+    matches: /^crime|CRIME$/i
+});
+bot.dialog('/Incidents/Corruption', dialogs.help.corruption)
+.triggerAction({
+    matches: /^corruption|CORRUPTION$/i
+});
+bot.dialog('/Incidents/Calamity', dialogs.help.calamity)
+.triggerAction({
+    matches: /^calamity|CALAMITY$/i
+});
+bot.dialog('/Incidents/Accident', dialogs.help.accident)
+.triggerAction({
+    matches: /^accident|Accident$/i
+});
+
+//=========================================================
+// Server Setup
+//=========================================================
+
+const server = restify.createServer();
+
+/**Endpoint for incoming messages*/
+server.post('/api/messages', connector.listen());
+
+server.listen(process.env.PORT || process.env.port || consts.PORT, () => {
+    console.log('Restify to port', server.url);
+});
