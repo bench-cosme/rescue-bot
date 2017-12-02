@@ -193,7 +193,7 @@ module.exports.accident = [
 
 function editUser(id, subscriptions) {
     var body = {
-        subscription: [subscriptions],
+        subscriptions: [subscriptions],
         receive_time: Date.now()
     }
 
