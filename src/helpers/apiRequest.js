@@ -101,4 +101,18 @@ module.exports.editUser =
         !err ? console.log(body) : console.log(err); 
     })
 }
+
+module.exports.getIncidents =
+(crime, callback) => {
+    var option = {
+        url: format('https://rescue-api.azurewebsites.net/incident/{0}', crime),
+        method: 'PATCH',
+        body: body,
+        // json: true
+    }
+
+    request(option, (err, httpRes, body) => {
+        !err ? callback(body) : console.log(err); 
+    })
+}
 /**END */

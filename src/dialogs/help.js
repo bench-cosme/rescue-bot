@@ -99,41 +99,53 @@ module.exports.crime = [
                     session.replaceDialog('/Emergency');
                 break;
 
-                // case choices[1]:
-                //     console.log('tips_murder');
-                // break;
+                case choices[1]:
+                    var crime = 'Murder';
+                    api.getIncidents(crime, (res) => {
+                        console.log(res);
+                        var tips = res.safetytips;
 
-                // case choices[4]:
-                //     console.log('tips_rob');
-                // break;
+                        tips.forEach((tip) => {
+                            session.endConversation(tip);
+                        })
+                    });
+                    
+                break;
 
-                // case choices[7]:
-                //     console.log('tips_drugs');
-                // break;
+                case choices[4]:
+                    var crime = 'Murder';
+                    console.log('tips_rob');
+                break;
 
-                // case choices[10]:
-                //     console.log('tips_childabuse');
-                // break;
+                case choices[7]:
+                    var crime = 'Murder';
+                    console.log('tips_drugs');
+                break;
 
-                // case choices[13]:
-                //     console.log('tips_rape');
-                // break;
+                case choices[10]:
+                    var crime = 'Abuse';
+                    console.log('tips_childabuse');
+                break;
 
-                // case choices[2]:
-                //     console.log('tips_rape');
-                // break;
+                case choices[13]:
+                    console.log('tips_rape');
+                break;
 
-                // case choices[5]:
-                // break;
+                case choices[2]:
+                    console.log('tips_rape');
+                break;
 
-                // case choices[8]:
-                // break;
+                case choices[5]:
+                break;
 
-                // case choices[11]:
-                // break;
+                case choices[8]:
+                break;
 
-                // case choices[14]:
-                // break;
+                case choices[11]:
+                break;
+
+                case choices[14]:
+                break;
                 
             }
         }
