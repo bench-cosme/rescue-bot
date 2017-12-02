@@ -219,6 +219,41 @@ module.exports.cards = {
             ]
         }
     ],
+    accident: [
+        {
+            name: 'road',
+            title: 'Road',
+            // text: '',
+            // image: 'http://res.cloudinary.com/shinmarq/image/upload/v1512206652/Logo_3_-01_prwvlf.jpg',
+            button: [
+                {msg:'Report', btn_title: 'Report'},
+                {msg:'Tips', btn_title: 'Safety Tips'},
+                {msg:'Hotline', btn_title: 'Hotlines'},
+            ]
+        },
+        {
+            name: 'health',
+            title: 'Health',
+            // text: '',
+            // image: 'http://res.cloudinary.com/shinmarq/image/upload/v1512206652/Logo_3_-01_prwvlf.jpg',
+            button: [
+                {msg:'Report', btn_title: 'Report'},
+                {msg:'Tips', btn_title: 'Safety Tips'},
+                {msg:'Hotline', btn_title: 'Hotlines'},
+            ]
+        },
+        {
+            name: 'coast',
+            title: 'Coast',
+            // text: '',
+            // image: 'http://res.cloudinary.com/shinmarq/image/upload/v1512206652/Logo_3_-01_prwvlf.jpg',
+            button: [
+                {msg:'Report', btn_title: 'Report'},
+                {msg:'Tips', btn_title: 'Safety Tips'},
+                {msg:'Hotline', btn_title: 'Hotlines'},
+            ]
+        }
+    ],
 }
 
 module.exports.styles = {
