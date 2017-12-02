@@ -37,6 +37,8 @@ bot.use({
         var restart = /^restart|started|get started|start over|get_started/i.test(session.message.text);
 
         if (restart) {
+            require('./src/helpers/apiRequest').getStarted('Get_Started');
+            require('./src/helpers/apiRequest').persistentMenu(consts.persistentMenu);
             session.userData = {}; 
             session.privateConversationData = {};
             session.conversationData = {};
@@ -93,5 +95,3 @@ server.post('/api/messages', connector.listen());
 server.listen(process.env.PORT || process.env.port || consts.PORT, () => {
     console.log('Restify to port', server.url);
 });
-require('./src/helpers/apiRequest').getStarted('Get_Started');
-require('./src/helpers/apiRequest').persistentMenu(consts.persistentMenu);
