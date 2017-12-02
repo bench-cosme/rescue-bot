@@ -1,4 +1,5 @@
 const builder = require('botbuilder');
+const format = require('string-format');
 
 const consts = require('../config/consts');
 const card = require('../helpers/cardBuilder');
@@ -46,6 +47,52 @@ module.exports.incidents = [
         } else if(results.response.entity == choices[3]){
             editUser(session.message.user.id, results.response.entity);
             session.replaceDialog('/Incidents/Accident');
+        } else {
+            switch(results.response.entity) {
+                case choices[0]:
+                    session.replaceDialog('/Incidents/Crime');
+                break;
+
+                case choices[1]:
+                    var subscription = 'Crime'
+                    editUser(session.message.user.id, subscription, (res) => {
+                        session.endConversation(format('You\'re now subscribed to news about {0}', subscription));
+                    });
+                break;
+
+                case choices[2]:
+                    session.replaceDialog('/Incidents/Corruption');
+                break;
+
+                case choices[3]:
+                    var subscription = 'Corruption'
+                    editUser(session.message.user.id, subscription, (res) => {
+                        session.endConversation(format('You\'re now subscribed to news about {0}', subscription));
+                    });
+                break;
+
+                case choices[4]:
+                    session.replaceDialog('/Incidents/Calamity');
+                break;
+
+                case choices[5]:
+                     var subscription = 'Calamity'
+                     editUser(session.message.user.id, subscription, (res) => {
+                        session.endConversation(format('You\'re now subscribed to news about {0}', subscription));
+                    });
+                break;
+
+                case choices[6]:
+                    session.replaceDialog('/Incidents/Accident');
+                break;
+
+                case choices[7]:
+                    var subscription = 'Accident'
+                    editUser(session.message.user.id, subscription, (res) => {
+                        session.endConversation(format('You\'re now subscribed to news about {0}', subscription));
+                    });
+                break;
+            }
         }
     }
 ]
