@@ -8,7 +8,7 @@ module.exports = [
         //Check if NLP present in sourceEvent
         let entities = ('nlp' in session.message.sourceEvent.message) ? session.message.sourceEvent.message.nlp.entities : undefined;
         
-        If NLP is Entities present
+        // If NLP is Entities present
         if(entities !== undefined){
             var intent = Object.keys(entities).length != 0 && !(Object.keys(entities).length > 1) ? entities[Object.keys(entities)][0].value : 'default';
         } else {
