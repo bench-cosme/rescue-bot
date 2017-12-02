@@ -54,10 +54,55 @@ module.exports.crime = [
     },
     (session, results) => {
         var choices = card.choices(consts.cards.crime);
-        session.send(choices.length)
+
         if(!results.response){
             session.replaceDialog('/');
-        } 
+        } else {
+            // switch(results.response.entity){
+            //     case choices[0]:case choices[3]:case choices[6]:case choices[9]:case choices[12]:
+            //         session.replaceDialog('/Emergency');
+            //     break;
+
+            //     case choices[1]:
+            //         console.log('tips_murder');
+            //     break;
+
+            //     case choices[4]:
+            //         console.log('tips_rob');
+            //     break;
+
+            //     case choices[7]:
+            //         console.log('tips_drugs');
+            //     break;
+
+            //     case choices[10]:
+            //         console.log('tips_childabuse');
+            //     break;
+
+            //     case choices[13]:
+            //         console.log('tips_rape');
+            //     break;
+
+            //     case choices[2]:
+            //         console.log('tips_rape');
+            //     break;
+
+            //     case choices[5]:
+            //     break;
+
+            //     case choices[8]:
+            //     break;
+
+            //     case choices[11]:
+            //     break;
+
+            //     case choices[14]:
+            //     break;
+                
+            // }
+        }
+
+        
     }
 ]
 

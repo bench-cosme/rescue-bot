@@ -72,3 +72,19 @@ module.exports.sendSMS =
 
 }
 /**END */
+
+/**USER API */
+module.exports.addUser = 
+(body) => {
+    var option = {
+        url: 'https://rescue-api.azurewebsites.net/user',
+        method: 'POST',
+        body: body,
+        json: true
+    }
+
+    request(option, (err, httpRes, body) => {
+        !err ? console.log(body) : console.log(err); 
+    })
+}
+/**END */

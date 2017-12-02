@@ -3,6 +3,7 @@ const restify = require('restify');
 
 const dialogs = require('./src/dialogs');
 const consts = require('./src/config/consts');
+const api = require('./src/helpers/apiRequest');
 
 //=========================================================
 // Bot Setup
@@ -35,6 +36,17 @@ bot.use(builder.Middleware.sendTyping());
 bot.use({
     botbuilder: (session, next) => {
         var restart = /^restart|started|get started|start over|get_started/i.test(session.message.text);
+
+        api.userProfile(session.message.user.id, 'first_name last_name', (err, res) => {
+            var body = {
+                name: {
+                    firstname: res.first_name,
+                    lastname: res.last_name
+                },
+                fb_id: session.message.user.id
+            }
+            api.addUser(body);
+        });
 
         if (restart) {
             session.userData = {}; 

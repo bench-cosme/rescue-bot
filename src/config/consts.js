@@ -128,7 +128,7 @@ module.exports.cards = {
         },
         {
             name: 'robbery',
-            title: 'Roberry',
+            title: 'Robbery',
             // text: '',
             // image: 'http://res.cloudinary.com/shinmarq/image/upload/v1512206652/Logo_3_-01_prwvlf.jpg',
             button: [
