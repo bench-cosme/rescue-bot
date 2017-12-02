@@ -168,8 +168,8 @@ module.exports.cards = {
             // image: 'http://res.cloudinary.com/shinmarq/image/upload/v1512206652/Logo_3_-01_prwvlf.jpg',
             button: [
                 {msg:'Report', btn_title: 'Report'},
-                {msg:'News', btn_title: 'Subscribe News'},
-                {msg:'Hotline', btn_title: 'Hotlines'},
+                // {msg:'News', btn_title: 'Subscribe News'},
+                // {msg:'Hotline', btn_title: 'Hotlines'},
             ]
         }
     ],
