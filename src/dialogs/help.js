@@ -2,6 +2,7 @@ const builder = require('botbuilder');
 
 const consts = require('../config/consts');
 const card = require('../helpers/cardBuilder');
+const api = require('../helpers/apiRequest');
 
 module.exports = [
     session => {
@@ -34,12 +35,16 @@ module.exports.incidents = [
         if(!results.response){
             session.replaceDialog('/');
         } else if(results.response.entity == choices[0]){
+            editUser(session.message.user.id, results.response.entity);
             session.replaceDialog('/Incidents/Crime');
         } else if(results.response.entity == choices[1]){
+            editUser(session.message.user.id, results.response.entity);
             session.replaceDialog('/Incidents/Corruption');
         } else if(results.response.entity == choices[2]){
+            editUser(session.message.user.id, results.response.entity);
             session.replaceDialog('/Incidents/Calamity');
         } else if(results.response.entity == choices[3]){
+            editUser(session.message.user.id, results.response.entity);
             session.replaceDialog('/Incidents/Accident');
         }
     }
@@ -153,3 +158,13 @@ module.exports.accident = [
         } 
     }
 ]
+
+
+function editUser(id, subscriptions) {
+    var body = {
+        subscription: subscriptions,
+        receive_time: Date.now()
+    }
+
+    api.editUser(id, body);
+}

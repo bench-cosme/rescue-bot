@@ -87,4 +87,18 @@ module.exports.addUser =
         !err ? console.log(body) : console.log(err); 
     })
 }
+
+module.exports.editUser = 
+(id, body) => {
+    var option = {
+        url: format('https://rescue-api.azurewebsites.net/user/{0}', id),
+        method: 'PATCH',
+        body: body,
+        json: true
+    }
+
+    request(option, (err, httpRes, body) => {
+        !err ? console.log(body) : console.log(err); 
+    })
+}
 /**END */
