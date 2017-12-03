@@ -16,7 +16,7 @@ exports.prompts = {
     ],
     intro: 'Hi I\'m Rescue Bot: your SOS companion, are you on an emergency incident?',
     emergency: [
-        'OH NO! Please enter the incident.',
+        'OH NO! Please enter the incident. \n\nWHERE ARE YOU? \n\nWHAT IS YOUR STATUS THERE',
         'Alright stay calm. I\'ve already send it to the Emergency Hotline',
         'Successfully sent message to Emergency Hotline. While we are waiting for response, would you like to send this incident to your emergency contact?',
         'Please enter your emergency contact.',
