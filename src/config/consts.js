@@ -21,12 +21,22 @@ exports.prompts = {
         'Successfully sent message to Emergency Hotline. While we are waiting for response, would you like to send this incident to your emergency contact?',
         'Please enter your emergency contact.',
         'Successfully sent to your Emergency Contact!'
+    ],
+    volunteer: [
+        'Volunteers are the lifeline of all operations of any foundation. Each foundation needs volunteers that can help respond to our fellow Filipinos in disasters and calamities.',
+        'Please answer the following as completely and honestly as possible,type "cancel" anytime you want to cancel your application',
+        'What is your full name?',
+        'Please enter your address',
+        'Can I have your email please?',
+        'What\'s your area of interest?',
+        'Great! I\'ve already sent your information to this foundation\'s email. You will receive a response from them soon.'
     ]
 };
 
 exports.choices = {
     confirm: ['Yes', 'No'],
-    default: ['Emergency?', 'Help Options']
+    default: ['Emergency?', 'Help Options'],
+    areaofinterest: ['Organize fundraiser', 'Render Volunteer Service', 'Medical', 'Dental'],
 };
 
 module.exports.cards = {
@@ -77,7 +87,7 @@ module.exports.cards = {
             name: 'crime',
             title: 'Crime',
             text: 'Seek help and tips about Crime.',
-            image: 'http://res.cloudinary.com/chatbotph/image/upload/v1512247876/rescue/17968689-Family-Abuse-Children-Hitting-Confine-Sexual-Harassment-Stick-Figure-Pictogram-Icon-Stock-Vector.jpg',
+            image: 'http://res.cloudinary.com/chatbotph/image/upload/v1512249904/rescue/aid166136-v4-900px-Fight-Crime-Step-5-Version-2.jpg',
             button: [
                 { msg: 'Crime', btn_title: 'Proceed' },
                 { msg: 'Subscribe_Crime', btn_title: 'Subscribe' }
@@ -97,7 +107,7 @@ module.exports.cards = {
             name: 'calamities',
             title: 'Calamities',
             text: 'Seek help and tips about Calamities.',
-            image: 'http://res.cloudinary.com/chatbotph/image/upload/v1512234201/rescue/24623509_1894219843926099_1412550792_o_n1opij.png',
+            image: 'http://res.cloudinary.com/chatbotph/image/upload/v1512266835/rescue/aid99723-v4-900px-Survive-a-Tsunami-Step-1.jpg',
             button: [
                 { msg: 'Calamities', btn_title: 'Proceed' },
                 { msg: 'Subscribe_Cal', btn_title: 'Subscribe' }
@@ -167,7 +177,7 @@ module.exports.cards = {
             // text: '',
             image: 'http://res.cloudinary.com/chatbotph/image/upload/v1512234201/rescue/24623509_1894219843926099_1412550792_o_n1opij.png',
             button: [
-                {msg:'Report', btn_title: 'Report'},
+                { msg: 'Report', btn_title: 'Report' },
                 // {msg:'News', btn_title: 'Subscribe News'},
                 // {msg:'Hotline', btn_title: 'Hotlines'},
             ]
@@ -180,31 +190,31 @@ module.exports.cards = {
             // text: '',
             image: 'http://res.cloudinary.com/chatbotph/image/upload/v1512234180/rescue/Flood-01_ileqth.jpg',
             button: [
-                {msg:'Report', btn_title: 'Report'},
-                {msg:'Tips_T', btn_title: 'Safety Tips'},
-                {msg:'Hotline_T', btn_title: 'Hotlines'},
+                { msg: 'Report', btn_title: 'Report' },
+                { msg: 'Tips_T', btn_title: 'Safety Tips' },
+                { msg: 'Hotline_T', btn_title: 'Hotlines' },
             ]
         },
         {
             name: 'earthquake',
             title: 'Earthquake',
             // text: '',
-             image: 'http://res.cloudinary.com/chatbotph/image/upload/v1512234171/rescue/24322162_1894219970592753_1334253143_o_lplc3g.png',
+            image: 'http://res.cloudinary.com/chatbotph/image/upload/v1512234171/rescue/24322162_1894219970592753_1334253143_o_lplc3g.png',
             button: [
-                {msg:'Report', btn_title: 'Report'},
-                {msg:'Tips_E', btn_title: 'Safety Tips'},
-                {msg:'Hotline_E', btn_title: 'Hotlines'},
+                { msg: 'Report', btn_title: 'Report' },
+                { msg: 'Tips_E', btn_title: 'Safety Tips' },
+                { msg: 'Hotline_E', btn_title: 'Hotlines' },
             ]
         },
         {
             name: 'fire',
             title: 'Fire',
             // text: '',
-             image: 'http://res.cloudinary.com/chatbotph/image/upload/v1512234171/rescue/24322162_1894219970592753_1334253143_o_lplc3g.png',
+            image: 'http://res.cloudinary.com/chatbotph/image/upload/v1512234171/rescue/24322162_1894219970592753_1334253143_o_lplc3g.png',
             button: [
-                {msg:'Report', btn_title: 'Report'},
-                {msg:'Tips_F', btn_title: 'Safety Tips'},
-                {msg:'Hotline_F', btn_title: 'Hotlines'},
+                { msg: 'Report', btn_title: 'Report' },
+                { msg: 'Tips_F', btn_title: 'Safety Tips' },
+                { msg: 'Hotline_F', btn_title: 'Hotlines' },
             ]
         }
     ],
@@ -215,9 +225,9 @@ module.exports.cards = {
             // text: '',
             image: 'http://res.cloudinary.com/chatbotph/image/upload/v1512234204/rescue/24323901_1894220170592733_1608231463_o_ohuwsj.png',
             button: [
-                {msg:'Report', btn_title: 'Report'},
-                {msg:'Tips_R', btn_title: 'Safety Tips'},
-                {msg:'Hotline_R', btn_title: 'Hotlines'},
+                { msg: 'Report', btn_title: 'Report' },
+                { msg: 'Tips_R', btn_title: 'Safety Tips' },
+                { msg: 'Hotline_R', btn_title: 'Hotlines' },
             ]
         },
         {
@@ -226,9 +236,9 @@ module.exports.cards = {
             // text: '',
             image: 'http://res.cloudinary.com/chatbotph/image/upload/v1512249288/rescue/aid699163-v4-900px-Know-if-You_ve-Had-a-Heart-Attack-Step-1-Version-2.jpg',
             button: [
-                {msg:'Report', btn_title: 'Report'},
-                {msg:'Tips_H', btn_title: 'Safety Tips'},
-                {msg:'Hotline_H', btn_title: 'Hotlines'},
+                { msg: 'Report', btn_title: 'Report' },
+                { msg: 'Tips_H', btn_title: 'Safety Tips' },
+                { msg: 'Hotline_H', btn_title: 'Hotlines' },
             ]
         },
         {
@@ -237,12 +247,12 @@ module.exports.cards = {
             // text: '',
             image: 'http://res.cloudinary.com/chatbotph/image/upload/v1512249226/rescue/aid1272248-v4-900px-Save-an-Active-Drowning-Victim-Step-9-Version-3.jpg',
             button: [
-                {msg:'Report', btn_title: 'Report'},
-                {msg:'Tips_C', btn_title: 'Safety Tips'},
-                {msg:'Hotline_C', btn_title: 'Hotlines'},
+                { msg: 'Report', btn_title: 'Report' },
+                { msg: 'Tips_C', btn_title: 'Safety Tips' },
+                { msg: 'Hotline_C', btn_title: 'Hotlines' },
             ]
         }
-    ],
+    ]
 }
 
 module.exports.styles = {
@@ -275,7 +285,7 @@ module.exports.persistentMenu = {
                     payload: "Help"
                 },
                 {
-                    title: "Powered By ChatbotPH 🤖",
+                    title: "Powered By Werpa Rangers 🤖",
                     type: "web_url",
                     url: "http://www.chatbot.ph/",
                     webview_height_ratio: "compact"
