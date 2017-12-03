@@ -16,9 +16,9 @@ module.exports = [
         if (!cancel) {
             session.send(consts.prompts.volunteer[3]);
 
-            api.sendSMS(results.response, (res) => {
-                builder.Prompts.choice(session, consts.prompts.volunteer[2], consts.choices.confirm, consts.styles.mr_button);
-            });
+            // api.sendSMS(results.response, (res) => {
+            //     builder.Prompts.choice(session, consts.prompts.volunteer[2], consts.choices.confirm, consts.styles.mr_button);
+            // });
 
         } else {
             session.endConversation('Alright! type "Help" to see options');
