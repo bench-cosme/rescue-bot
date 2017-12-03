@@ -107,7 +107,7 @@ module.exports.cards = {
             name: 'calamities',
             title: 'Calamities',
             text: 'Seek help and tips about Calamities.',
-            image: 'http://res.cloudinary.com/chatbotph/image/upload/v1512234201/rescue/24623509_1894219843926099_1412550792_o_n1opij.png',
+            image: 'http://res.cloudinary.com/chatbotph/image/upload/v1512266835/rescue/aid99723-v4-900px-Survive-a-Tsunami-Step-1.jpg',
             button: [
                 { msg: 'Calamities', btn_title: 'Proceed' },
                 { msg: 'Subscribe_Cal', btn_title: 'Subscribe' }
