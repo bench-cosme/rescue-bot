@@ -37,17 +37,17 @@ bot.use({
     botbuilder: (session, next) => {
         var restart = /^restart|started|get started|start over|get_started/i.test(session.message.text);
 
-        api.userProfile(session.message.user.id, 'first_name,last_name', (err, res) => {
-            console.log(res)
-            var body = {
-                name: {
-                    firstname: res.first_name,
-                    lastname: res.last_name
-                },
-                fb_id: session.message.user.id
-            }
-            api.addUser(body);
-        });
+        // api.userProfile(session.message.user.id, 'first_name,last_name', (err, res) => {
+        //     console.log(res)
+        //     var body = {
+        //         name: {
+        //             firstname: res.first_name,
+        //             lastname: res.last_name
+        //         },
+        //         fb_id: session.message.user.id
+        //     }
+        //     api.addUser(body);
+        // });
 
         if (restart) {
             session.userData = {}; 
