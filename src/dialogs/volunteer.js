@@ -43,7 +43,7 @@ module.exports = [
 
         if (!cancel) {
             // builder.Prompts.text(session, consts.prompts.volunteer[5]);
-            builder.prompts.choice(session, consts.prompts.volunteer[5],consts.choices.areaofinterest, consts.styles.mr_button);
+            builder.Prompts.choice(session, consts.prompts.volunteer[5],consts.choices.areaofinterest, consts.styles.mr_button);
 
             // api.sendSMS(results.response, (res) => {
             //     builder.Prompts.choice(session, consts.prompts.volunteer[2], consts.choices.confirm, consts.styles.mr_button);
