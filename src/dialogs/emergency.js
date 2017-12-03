@@ -40,7 +40,8 @@ module.exports = [
         if(!results.response){
             session.replaceDialog('/');
         } else  {
-            session.endConversation(consts.prompts.emergency[4]);
+            session.send(consts.prompts.emergency[4]);
+            session.endConversation(consts.prompts.emergency[5]);
         }
     }
 ]

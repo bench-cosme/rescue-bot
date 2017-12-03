@@ -16,11 +16,12 @@ exports.prompts = {
     ],
     intro: 'Hi I\'m Rescue Bot: your SOS companion, are you on an emergency incident?',
     emergency: [
-        'OH NO! Please enter the incident. \n\nWHERE ARE YOU? \n\nWHAT IS YOUR STATUS THERE',
+        'OH NO! Please state accurately your location, current condition and exact incident.',
         'Alright stay calm. I\'ve already send it to the Emergency Hotline',
-        'Successfully sent message to Emergency Hotline. While we are waiting for response, would you like to send this incident to your emergency contact?',
+        'While we are waiting for response, would you like to send this incident to your emergency contact?',
         'Please enter your emergency contact.',
-        'Successfully sent to your Emergency Contact!'
+        'An SMS was successfully sent to your Emergency Contact/s!',
+        'Type "help" to view initial actions that corresponds your situation'
     ],
     volunteer: [
         'Volunteers are the lifeline of all operations of any foundation. Each foundation needs volunteers that can help respond to our fellow Filipinos in disasters and calamities.',
