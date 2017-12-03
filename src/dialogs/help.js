@@ -127,6 +127,8 @@ module.exports.crime = [
                         tips.forEach((tip) => {
                             session.endConversation(tip);
                         })
+                        session.send('Here\'s a video of safety tips for ' + crime);
+                        session.endConversation(res.data.references[0]);
                     });
                 break;
 
@@ -140,7 +142,8 @@ module.exports.crime = [
                         tips.forEach((tip) => {
                             session.endConversation(tip);
                         })
-                        
+                        session.send('Here\'s a video of safety tips for ' + crime);
+                        session.endConversation(res.data.references[0]);
                     });
                 break;
 
@@ -154,6 +157,8 @@ module.exports.crime = [
                         tips.forEach((tip) => {
                             session.endConversation(tip);
                         })
+                        session.send('Here\'s a video of safety tips for ' + crime);
+                        session.endConversation(res.data.references[0]);
                     });
                 break;
 

@@ -17,8 +17,10 @@ module.exports = [
 
         if (intent == 'default'){
              builder.Prompts.choice(session, randomReplies(consts.prompts.default), consts.choices.default, consts.styles.mr_auto);
+        } else if(intent == 'compliment') {
+             session.endConversation('Alright keep safe!');
         } else {
-             session.replaceDialog('/Emergency');
+            session.replaceDialog('/Emergency');
         }
 
         // builder.Prompts.choice(session, consts.prompts.default, consts.choices.default, consts.styles.mr_button);
