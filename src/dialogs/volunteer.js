@@ -6,18 +6,18 @@ const api = require('../helpers/apiRequest');
 
 module.exports = [
     session => {
-        session.send(consts.prompts.emergency[0])
-        session.send(consts.prompts.emergency[1])
+        session.send(consts.prompts.volunteer[0])
+        session.send(consts.prompts.volunteer[1])
         builder.Prompts.text(session, consts.prompts.volunteer[2]);
     },
     (session, results) => {
         var cancel = /^cancel/i.test(session.message.text || results.response);
 
         if (!cancel) {
-            session.send(consts.prompts.emergency[3]);
+            session.send(consts.prompts.volunteer[3]);
 
             api.sendSMS(results.response, (res) => {
-                builder.Prompts.choice(session, consts.prompts.emergency[2], consts.choices.confirm, consts.styles.mr_button);
+                builder.Prompts.choice(session, consts.prompts.volunteer[2], consts.choices.confirm, consts.styles.mr_button);
             });
 
         } else {
@@ -28,10 +28,10 @@ module.exports = [
         var cancel = /^cancel/i.test(session.message.text || results.response);
 
         if (!cancel) {
-            session.send(consts.prompts.emergency[4]);
+            session.send(consts.prompts.volunteer[4]);
 
             api.sendSMS(results.response, (res) => {
-                builder.Prompts.choice(session, consts.prompts.emergency[2], consts.choices.confirm, consts.styles.mr_button);
+                builder.Prompts.choice(session, consts.prompts.volunteer[2], consts.choices.confirm, consts.styles.mr_button);
             });
 
         } else {
@@ -42,10 +42,10 @@ module.exports = [
         var cancel = /^cancel/i.test(session.message.text || results.response);
 
         if (!cancel) {
-            session.send(consts.prompts.emergency[5]);
+            session.send(consts.prompts.volunteer[5]);
 
             api.sendSMS(results.response, (res) => {
-                builder.Prompts.choice(session, consts.prompts.emergency[2], consts.choices.confirm, consts.styles.mr_button);
+                builder.Prompts.choice(session, consts.prompts.volunteer[2], consts.choices.confirm, consts.styles.mr_button);
             });
 
         } else {
@@ -62,7 +62,7 @@ module.exports = [
             session.endConversation('Alright! type "Help" to see options');
         }
         else {
-            session.endConversation(consts.prompts.emergency[6]);
+            session.endConversation(consts.prompts.volunteer[6]);
         }
     }
 ]
