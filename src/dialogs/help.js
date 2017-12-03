@@ -19,6 +19,8 @@ module.exports = [
             session.replaceDialog('/');
         } else if(results.response.entity == choices[0]) {
             session.replaceDialog('/Incidents');
+        } else if(results.response.entity == choices[2]) {
+            session.replaceDialog('/Volunteer');
         }
     }
 ]
