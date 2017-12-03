@@ -14,7 +14,7 @@ module.exports = [
         var cancel = /^cancel/i.test(session.message.text || results.response);
 
         if (!cancel) {
-            session.send(consts.prompts.volunteer[3]);
+            builder.Prompts.text(session, consts.prompts.volunteer[3]);
 
             // api.sendSMS(results.response, (res) => {
             //     builder.Prompts.choice(session, consts.prompts.volunteer[2], consts.choices.confirm, consts.styles.mr_button);
@@ -28,11 +28,11 @@ module.exports = [
         var cancel = /^cancel/i.test(session.message.text || results.response);
 
         if (!cancel) {
-            session.send(consts.prompts.volunteer[4]);
+            builder.Prompts.text(session, consts.prompts.volunteer[4]);
 
-            api.sendSMS(results.response, (res) => {
-                builder.Prompts.choice(session, consts.prompts.volunteer[2], consts.choices.confirm, consts.styles.mr_button);
-            });
+            // api.sendSMS(results.response, (res) => {
+            //     builder.Prompts.choice(session, consts.prompts.volunteer[2], consts.choices.confirm, consts.styles.mr_button);
+            // });
 
         } else {
             session.endConversation('Alright! type "Help" to see options');
@@ -42,11 +42,11 @@ module.exports = [
         var cancel = /^cancel/i.test(session.message.text || results.response);
 
         if (!cancel) {
-            session.send(consts.prompts.volunteer[5]);
+            builder.Prompts.text(session, consts.prompts.volunteer[5]);
 
-            api.sendSMS(results.response, (res) => {
-                builder.Prompts.choice(session, consts.prompts.volunteer[2], consts.choices.confirm, consts.styles.mr_button);
-            });
+            // api.sendSMS(results.response, (res) => {
+            //     builder.Prompts.choice(session, consts.prompts.volunteer[2], consts.choices.confirm, consts.styles.mr_button);
+            // });
 
         } else {
             session.endConversation('Alright! type "Help" to see options');
